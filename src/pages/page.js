@@ -23,7 +23,7 @@ function Pages() {
 
   useEffect(() => {
     // Define the URL to fetch the base64-encoded PDF pages
-    const pdfPagesUrl = `https://pdf-editor-backend-kaj5.onrender.com/pdf/${id}`;
+    const pdfPagesUrl = `https://pdf-editor-backend.vercel.app/pdf/${id}`;
 
     // Use Axios to download the array of base64-encoded PDF pages
     setPageload(true)
@@ -44,7 +44,7 @@ function Pages() {
     if (selectedPages.length > 0) {
       setLoad(true)
       const pages = { arr: selectedPages };
-      axios.post(`https://pdf-editor-backend-kaj5.onrender.com/edit/${id}`, pages)
+      axios.post(`https://pdf-editor-backend.vercel.app/edit/${id}`, pages)
         .then((response) => {
           // Update the 'result' state with the response data
           console.log(response.data.buffer.data)

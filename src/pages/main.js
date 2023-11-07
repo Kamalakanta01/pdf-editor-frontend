@@ -14,7 +14,7 @@ const Main = () => {
     const formData = new FormData();
     formData.append("pdfFile", file); // Use "pdfFile" as the field name
     axios
-      .post("https://pdf-editor-backend-kaj5.onrender.com/pdf", formData, {
+      .post("https://pdf-editor-backend.vercel.app/pdf", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
